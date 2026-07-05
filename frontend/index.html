@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoLens AI</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav>
+
+        <div class="logo">
+            🌿 EcoLens AI
+        </div>
+
+        <ul>
+
+            <li><a href="#">Home</a></li>
+
+            <li><a href="#features">Features</a></li>
+
+            <li><a href="#about">About</a></li>
+
+            <li><a href="#contact">Contact</a></li>
+
+        </ul>
+
+    </nav>
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <div class="left">
+
+            <h1>
+                Scan Smart.
+                <br>
+                Recycle Right.
+                <br>
+                Save the Planet.
+            </h1>
+
+            <p>
+
+                EcoLens AI helps users identify waste using Artificial Intelligence,
+                provides recycling guidance, eco tips and nearby recycling centers.
+
+            </p>
+
+            <div class="buttons">
+
+                <input
+                    type="file"
+                    id="imageInput"
+                    accept="image/*"
+                    hidden>
+
+                <button id="uploadBtn">
+
+                    <i class="fa-solid fa-upload"></i>
+
+                    Upload Image
+
+                </button>
+
+                <button id="scanBtn">
+
+                    <i class="fa-solid fa-camera"></i>
+
+                    Analyze Waste
+
+                </button>
+
+            </div>
+
+            <!-- Image Preview -->
+
+            <div class="preview">
+
+                <img
+                    id="previewImage"
+                    src=""
+                    alt="Preview Image">
+
+            </div>
+            <div id="analysisCard">
+
+    <h2>🤖 AI Analysis</h2>
+
+    <h3 id="wasteType">No Image Selected</h3>
+
+    <div class="analysis-row">
+        <span>♻ Waste Type</span>
+        <span id="type">-</span>
+    </div>
+
+    <div class="analysis-row">
+        <span>🌱 Eco Score</span>
+        <span id="ecoScore">-</span>
+    </div>
+
+    <div class="progress">
+
+        <div id="progressBar"></div>
+
+    </div>
+
+    <div class="analysis-row">
+        <span>✅ Recyclable</span>
+        <span id="recyclable">-</span>
+    </div>
+
+    <div class="analysis-row">
+        <span>⭐ AI Confidence</span>
+        <span id="confidence">-</span>
+    </div>
+
+    <div class="analysis-row">
+        <span>🗑 Bin</span>
+        <span id="bin">-</span>
+    </div>
+
+    <div class="analysis-row">
+        <span>🌳 Trees Saved</span>
+        <span id="trees">-</span>
+    </div>
+
+    <div class="analysis-row">
+        <span>💨 CO₂ Saved</span>
+        <span id="co2">-</span>
+    </div>
+
+    <div class="analysis-row">
+        <span>💡 Reuse</span>
+        <span id="reuse">-</span>
+    </div>
+
+    <div class="analysis-row">
+        <span>🌱 Eco Tip</span>
+        <span id="tip">-</span>
+    </div>
+
+</div>
+
+        </div>
+
+        <div class="right">
+
+            <img
+                src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=900"
+                alt="Eco Image">
+
+        </div>
+
+    </section>
+
+    <!-- ================= AI RESULT ================= -->
+
+    <section id="resultSection">
+
+        <h2>🤖 AI Waste Analysis</h2>
+
+        <div class="result-card">
+
+            <h3 id="wasteType">
+
+                Upload an image to begin analysis
+
+            </h3>
+
+            <div class="result-item">
+
+                <span>♻ Waste Type</span>
+
+                <span id="type">
+
+                    -
+
+                </span>
+
+            </div>
+
+            <div class="result-item">
+
+                <span>✅ Recyclable</span>
+
+                <span id="recyclable">
+
+                    -
+
+                </span>
+
+            </div>
+
+            <div class="result-item">
+
+                <span>🗑 Recommended Bin</span>
+
+                <span id="bin">
+
+                    -
+
+                </span>
+
+            </div>
+
+            <div class="result-item">
+
+                <span>⏳ Decomposition Time</span>
+
+                <span id="time">
+
+                    -
+
+                </span>
+
+            </div>
+
+            <div class="result-item">
+
+                <span>🌍 Carbon Impact</span>
+
+                <span id="impact">
+
+                    -
+
+                </span>
+
+            </div>
+
+            <div class="result-item">
+
+                <span>💡 Reuse Idea</span>
+
+                <span id="reuse">
+
+                    -
+
+                </span>
+
+            </div>
+
+            <div class="result-item">
+
+                <span>🌱 Eco Tip</span>
+
+                <span id="tip">
+
+                    -
+
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= FEATURES ================= -->
+
+    <section id="features">
+
+        <h2 class="section-title">
+
+            Our Features
+
+        </h2>
+
+        <div class="feature-container">
+
+            <div class="card">
+
+                <i class="fa-solid fa-recycle"></i>
+
+                <h3>AI Waste Detection</h3>
+
+                <p>
+
+                    Detect plastic, paper, glass, metal, organic and electronic waste.
+
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                <h3>Nearby Recycling Centers</h3>
+
+                <p>
+
+                    Find nearby recycling stations using maps.
+
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-chart-column"></i>
+
+                <h3>Eco Dashboard</h3>
+
+                <p>
+
+                    View charts, eco score and recycling impact.
+
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-lightbulb"></i>
+
+                <h3>Reuse Ideas</h3>
+
+                <p>
+
+                    Get creative ideas to reuse waste instead of throwing it away.
+
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-robot"></i>
+
+                <h3>AI Assistant</h3>
+
+                <p>
+
+                    Ask AI any recycling or sustainability question.
+
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-earth-americas"></i>
+
+                <h3>Community Impact</h3>
+
+                <p>
+
+                    Track environmental impact made by EcoLens users.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about">
+
+        <h2>
+
+            About EcoLens AI
+
+        </h2>
+
+        <p>
+
+            EcoLens AI is an AI-powered sustainability platform that helps users
+            identify waste, recycle correctly and reduce environmental pollution.
+
+        </p>
+
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact">
+
+        <h2>
+
+            Join Our Mission 🌍
+
+        </h2>
+
+        <p>
+
+            Together we can make Earth cleaner and greener.
+
+        </p>
+
+        <button>
+
+            Get Started
+
+        </button>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <h2>
+
+            🌿 EcoLens AI
+
+        </h2>
+
+        <p>
+
+            Scan Smart • Recycle Right • Save the Planet
+
+        </p>
+
+        <div class="socials">
+
+            <i class="fa-brands fa-github"></i>
+
+            <i class="fa-brands fa-linkedin"></i>
+
+            <i class="fa-brands fa-instagram"></i>
+
+            <i class="fa-brands fa-x-twitter"></i>
+
+        </div>
+
+        <p>
+
+            © 2026 EcoLens AI. All Rights Reserved.
+
+        </p>
+
+    </footer>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
