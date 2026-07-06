@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/24wh1a05z9/EcoLens/issues"
   },
-  "homepage": "https://github.com/24wh1a05z9/EcoLens#readme"
+  "homepage": "https://github.com/24wh1a05z9/EcoLens#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
 }
